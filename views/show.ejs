@@ -9,13 +9,13 @@
 </head>
 <body>
     <div class="container"></div>
-    <h1>Name: <%= budgets.name %></h1>
-    <p>Date: <%= budgets.date %></p>
-    <p>Company: <%= budgets.from %></p>
-    <p>Amount: <%= budgets.amount %></p>
-    <p>Type: <%= budgets.tags %></p>
+    <h1><%= budgets.name %></h1>
+    <a href="/budgets"><button>BACK</button></a>
+    <p><strong>date</strong></br><%= budgets.date %></p>
+    <p><strong>from</strong></br><%= budgets.from %></p>
+    <p><strong>amount</strong></br><%= budgets.amount %></p>
+    <p><strong>tags</strong></br>budgets.tags %></p>
 
-    <a href="/budgets">Back to the budget index</a>
     
 </body>
 </html>

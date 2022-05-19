@@ -8,14 +8,15 @@
     <title>Create a new Fruit</title>
 </head>
 <body>
-    <h1>Add to Budget</h1>
+    <div class="container"></div>
+    <h1>Add to budget</h1>
     <form action="/budgets" method="POST">
-        Name: <input type="text" name="name"/> <br/>
-        Date: <input type="date" name="date"/> <br/>
-        Company: <input type="text" name="from"/><br/>
-        Amount: <input type="text" name="amount"/><br/>
-        Tags: <input type="text" name="tags"/><br/>
-        <input type="submit" value="Add"/>
+        <input type="text" name="date" placeholder="date"/> <br/>
+        <input type="text" name="name" placeholder="name"/> <br/>
+        <input type="text" name="amount" placeholder="amount"/><br/>
+        <input type="text" name="from" placeholder="company"/><br/>
+        <input type="text" name="tags" placeholder="tags"/><br/>
+        <input type="submit" value="CREATE NEW ITEM" style="text-decoration: none;"/>
     </form>
 </body>
 </html>

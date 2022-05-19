@@ -9,9 +9,11 @@
 </head>
 <body>
     <h1>Budgtr</h1>
+    <button><a href="/budgets/new" style="text-decoration: none;">NEW ITEM</a></button>
     <div class="container"></div>
-    <table>
-    <% for (let i = 0; i < budget.length; i++) { %>
+        <%= const bankAccount = 
+        <table>
+        <% for (let i = 0; i < budget.length; i++) { %>
                 <tr>
                     <td><%= budget[i].date %></td>
                     <td><a href="/budgets/<%= i %>">
@@ -19,7 +21,7 @@
                     </a></td>
                     <td> <%= budget[i].amount %></td>
                 </tr>
-    <% } %>
-</table>
+        <% } %>
+        </table>
 </body>
 </html>
