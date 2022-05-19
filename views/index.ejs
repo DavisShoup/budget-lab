@@ -8,10 +8,18 @@
     <title>Index</title>
 </head>
 <body>
+    <div class="container">
     <h1>Budgtr</h1>
     <button><a href="/budgets/new" style="text-decoration: none;">NEW ITEM</a></button>
-    <div class="container"></div>
-        <%= const bankAccount = 
+    <% let bankAccount = 0 %>
+    <% let changeColor = null%>
+    <% budget.map((element) => { %>
+    <% dollar = parseInt(element.amount) %>
+    <% bankAccount = bankAccount + dollar; %>
+    <% if(bankAccount < 0){ changeColor = "red";}else if(bankAccount > 1000){ changeColor = "green"}%>
+    <% }); %>
+    <style> body { background-color: <%= changeColor %>}</style>
+    <h2>Bank Account Total: <%= bankAccount %></h2>
         <table>
         <% for (let i = 0; i < budget.length; i++) { %>
                 <tr>
@@ -23,5 +31,6 @@
                 </tr>
         <% } %>
         </table>
+    </div>
 </body>
 </html>
